@@ -1,10 +1,11 @@
-import React from "react";
+import { useSelector } from "react-redux";
+import { selectTask } from "./taskFormSlice";
 
 const Tasks = () => {
+  const toDo = useSelector(selectTask);
   return (
     <div className="mt-10 flex flex-col space-y-8 items-center justify-center">
-      <p>Task 1</p>
-      <p>Task 2</p>
+      <span>{toDo}</span>
     </div>
   );
 };
