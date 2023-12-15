@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { add } from "./taskFormSlice";
 
 const TaskForm = () => {
@@ -9,7 +9,7 @@ const TaskForm = () => {
   return (
     <div className="flex flex-col space-y-8 items-center justify-center">
       <div className="text-7xl mt-60">To Do App</div>
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <input
           value={toDo}
           onChange={(e) => setToDo(e.target.value)}
