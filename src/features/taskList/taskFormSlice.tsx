@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 
-type SliceState = { value: " " };
+type SliceState = { value: "" };
 
-const initialState: SliceState = { value: " " };
+const initialState: SliceState = { value: "" };
 
 export const taskFormSlice = createSlice({
   name: "addToDo",

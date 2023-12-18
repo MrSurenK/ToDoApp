@@ -9,6 +9,7 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>;
 
-export type AppDispatch = typeof store.dispatch;
+export default store;
+// export type AppDispatch = typeof store.dispatch;
 
 // This creates a redux store. amd also automatically configure the ReduxDevTools extension so that you can inspect the store while developing.
