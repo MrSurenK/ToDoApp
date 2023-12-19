@@ -10,15 +10,15 @@ const Tasks = () => {
         {toDo
           .slice(0) // Creates a shallow copy of the toDo array
           .reverse()
-          .map((task: string, i: number) => (
+          .map((item, i: number) => (
             <div key={i}>
-              {task}
+              {item.name}
               <div className="inline-block">
                 <input
                   name="task"
                   value="incomplete"
                   type="checkbox"
-                  onClick={() => dispatch(pending())}
+                  onClick={() => dispatch(pending(item.name))}
                 ></input>
               </div>
             </div>
