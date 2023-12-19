@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import addTaskReducer from "../features/taskList/taskFormSlice";
+import taskReducer from "../features/taskList/taskFormSlice";
 
 export const store = configureStore({
   reducer: {
-    addToDo: addTaskReducer,
+    toDos: taskReducer,
   },
 });
 

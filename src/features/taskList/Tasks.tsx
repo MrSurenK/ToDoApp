@@ -1,20 +1,25 @@
-import { useSelector } from "react-redux";
-import { selectTask } from "./taskFormSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { selectTask, pending } from "./taskFormSlice";
 
 const Tasks = () => {
   const toDo = useSelector(selectTask);
+  const dispatch = useDispatch();
   return (
     <div className="mt-10 flex flex-col items-center justify-center">
       <div>
         {toDo
-          .slice(0)
+          .slice(0) // Creates a shallow copy of the toDo array
           .reverse()
           .map((task: string, i: number) => (
             <div key={i}>
               {task}
-              {i}
               <div className="inline-block">
-                <input type="checkbox"></input>
+                <input
+                  name="task"
+                  value="incomplete"
+                  type="checkbox"
+                  onClick={() => dispatch(pending())}
+                ></input>
               </div>
             </div>
           ))}
