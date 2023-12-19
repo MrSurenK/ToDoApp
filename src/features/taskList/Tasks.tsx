@@ -5,7 +5,11 @@ const Tasks = () => {
   const toDo = useSelector(selectTask);
   return (
     <div className="mt-10 flex flex-col space-y-8 items-center justify-center">
-      <span>{toDo}</span>
+      <div>
+        {toDo.map((task) => (
+          <div>{task}</div>
+        ))}
+      </div>
     </div>
   );
 };
