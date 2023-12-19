@@ -10,19 +10,37 @@ const Tasks = () => {
         {toDo
           .slice(0) // Creates a shallow copy of the toDo array
           .reverse()
-          .map((item, i: number) => (
-            <div key={i}>
-              {item.name}
-              <div className="inline-block">
-                <input
-                  name="task"
-                  value="incomplete"
-                  type="checkbox"
-                  onClick={() => dispatch(pending(item.name))}
-                ></input>
-              </div>
-            </div>
-          ))}
+          .map((item, i: number) => {
+            if (item.completion === false) {
+              return (
+                <div key={i}>
+                  {item.name}
+                  <div className="inline-block">
+                    <input
+                      name="task"
+                      value="incomplete"
+                      type="checkbox"
+                      onClick={() => dispatch(pending(item.name))}
+                    ></input>
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <div key={i}>
+                  <del>{item.name}</del>
+                  <div className="inline-block">
+                    <input
+                      name="task"
+                      value="complete"
+                      type="checkbox"
+                      onClick={() => dispatch(pending(item.name))}
+                    ></input>
+                  </div>
+                </div>
+              );
+            }
+          })}
       </div>
     </div>
   );
