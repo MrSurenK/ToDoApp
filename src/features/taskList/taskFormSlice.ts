@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 
 type SliceState = { task: string[] };
@@ -9,7 +9,7 @@ export const taskFormSlice = createSlice({
   name: "addToDo",
   initialState,
   reducers: {
-    add: (state, action) => {
+    add: (state, action: PayloadAction<string>) => {
       state.task.push(action.payload);
     },
   },
