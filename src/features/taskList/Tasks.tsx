@@ -6,8 +6,8 @@ const Tasks = () => {
   return (
     <div className="mt-10 flex flex-col space-y-8 items-center justify-center">
       <div>
-        {toDo.map((task) => (
-          <div>{task}</div>
+        {toDo.map((task, i) => (
+          <div key={i}>{task}</div>
         ))}
       </div>
     </div>
