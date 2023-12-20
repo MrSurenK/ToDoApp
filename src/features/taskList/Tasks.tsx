@@ -15,7 +15,7 @@ const Tasks = () => {
             return (
               <div
                 key={i}
-                className="bg-purple-500 saturate-150 relative ring-4 rounded-md ring-pink-500 ring-offset-slate-50 dark:ring-offset-slate-900 shadow-inner"
+                className="bg-purple-500 saturate-150 relative ring-4 rounded-md ring-pink-500 ring-offset-slate-50 dark:ring-offset-slate-900 shadow-inner ml-2 mr-2"
               >
                 <div className="ml-5 mr-5 mt-2 mb-1 font-bold">{item.name}</div>
                 <div className="inline-flex absolute right-0 bottom-0">
