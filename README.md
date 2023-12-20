@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # To Do App
 
 # A mobile friendly To-Do Web App
