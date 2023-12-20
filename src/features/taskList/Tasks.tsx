@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { selectTask, pending, del } from "./taskFormSlice";
+import Counter from "./Counter";
 
 const Tasks = () => {
   const toDo = useSelector(selectTask);
@@ -47,6 +48,7 @@ const Tasks = () => {
             }
           })}
       </div>
+      <Counter />
     </div>
   );
 };
