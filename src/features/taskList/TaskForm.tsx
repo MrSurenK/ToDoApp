@@ -25,7 +25,7 @@ const TaskForm = () => {
           />
           <div className="inline-block">
             <button
-              className="ml-2 px-4 py-2 bg-blue-700 rounded-full text-white shadow-lg hover:shadow-sky-700"
+              className="px-4 py-2 bg-blue-700 rounded-full text-white shadow-lg hover:shadow-sky-700 ml-40 mt-2 sm:ml-2"
               type="submit"
               onClick={() => {
                 setUserInputVal(" ");
