@@ -14,7 +14,7 @@ const Tasks = () => {
           if (item.completion === false) {
             return (
               <div key={i} className="bg-purple-500 relative">
-                <span className="ml-5">{item.name}</span>
+                <div className="ml-5 mr-5 mt-2 mb-1">{item.name}</div>
                 <div className="inline-flex absolute right-0 bottom-0">
                   <input
                     name="task"
@@ -33,9 +33,11 @@ const Tasks = () => {
             );
           } else {
             return (
-              <div key={i}>
-                <del>{item.name}</del>
-                <div className="inline-block fixed">
+              <div key={i} className="bg-purple-500 relative">
+                <div className="ml-5 mr-5 mt-2 mb-1">
+                  <del>{item.name}</del>
+                </div>
+                <div className="inline-flex absolute right-0 bottom-0">
                   <input
                     name="task"
                     value="complete"
