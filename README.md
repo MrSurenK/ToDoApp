@@ -1,35 +1,34 @@
 <<<<<<< HEAD
-# ToDoApp
-A Simple to-do web app
-=======
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# To Do App
 
-Currently, two official plugins are available:
+# A mobile friendly To-Do Web App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- Typescript
+- React
+- Redux Toolkit
+- Tailwind CSS
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+1. Add tasks
+2. Completed tasks will be counted and strikeout font applied
+3. Tasks can be deleted
+4. Mobile friendly UI
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## How to use
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
->>>>>>> e93b861 (initialise app)
+1. Add task by filling in the input field and selecting the add button. Your new task will be added to the top of the list
+2. Once completed select the checkbox and strikeout font will be triggered. The completed task will be added to the counter below the task list
+3. Click on the cross button to delete a task
+
+## Known Bugs
+
+- Selected checkbox glitches when new tasks are added.
+
+## Screenshots
+
+![DesktopApp](./screenshots/AppPreview.png)
+![MobileApp](./screenshots/MobileVersion.png)
