@@ -4,7 +4,7 @@ import { selectCounter } from "./taskFormSlice";
 const Counter = () => {
   const count = useSelector(selectCounter);
 
-  return <div className="flex items-end ">Completed Tasks: {count} </div>;
+  return <div className="flex justify-center">Completed Tasks: {count} </div>;
 };
 
 export default Counter;
