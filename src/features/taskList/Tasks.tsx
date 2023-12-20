@@ -6,7 +6,7 @@ const Tasks = () => {
   const toDo = useSelector(selectTask);
   const dispatch = useDispatch();
   return (
-    <div className="bg-blue-500 space-y-4 w-96 justify-center flex flex-col">
+    <div className="bg-blue-500 w-full space-y-4 justify-center flex flex-col sm:w-5/12">
       {toDo
         .slice(0) // Creates a shallow copy of the toDo array
         .reverse()
@@ -14,8 +14,8 @@ const Tasks = () => {
           if (item.completion === false) {
             return (
               <div key={i} className="bg-purple-500 relative">
-                <span className="">{item.name}</span>
-                <div className="inline-flex absolute right-0">
+                <span className="ml-5">{item.name}</span>
+                <div className="inline-flex absolute right-0 bottom-0">
                   <input
                     name="task"
                     value="incomplete"
