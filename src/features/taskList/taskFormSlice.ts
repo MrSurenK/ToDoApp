@@ -6,8 +6,6 @@ export interface TaskListSliceState {
   count: number;
 }
 
-// type SliceState = { task: TaskList, completion: TaskList };
-
 const initialState: TaskListSliceState = { task: [], count: 0 };
 
 export const taskFormSlice = createSlice({

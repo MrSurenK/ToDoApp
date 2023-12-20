@@ -24,9 +24,9 @@ const Tasks = () => {
                       onClick={() => dispatch(pending(item.name))}
                     ></input>
                   </div>
-                  <div className="inline-block ml-2 px-1 py-0.5 bg-red-700">
+                  <div className="inline-block ml-2 bg-red-700 px-2 py-0 text-white shadow-lg hover:shadow-red-950">
                     <button onClick={() => dispatch(del(toDo.length - 1 - i))}>
-                      Delete
+                      x
                     </button>
                   </div>
                 </div>
