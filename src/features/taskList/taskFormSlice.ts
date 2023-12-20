@@ -25,10 +25,15 @@ export const taskFormSlice = createSlice({
         state.task[taskIndex].completion = !state.task[taskIndex].completion;
       }
     },
+    del: (state, action: PayloadAction<number>) => {
+      const taskIndex = action.payload;
+      state.task = state.task.filter((_, index) => index !== taskIndex);
+      console.log(state.task);
+    },
   },
 });
 
-export const { add, pending } = taskFormSlice.actions;
+export const { add, pending, del } = taskFormSlice.actions;
 
 export const selectTask = (state: RootState) => state.toDos.task;
 

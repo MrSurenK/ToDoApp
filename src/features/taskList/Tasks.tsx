@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectTask, pending } from "./taskFormSlice";
+import { selectTask, pending, del } from "./taskFormSlice";
 
 const Tasks = () => {
   const toDo = useSelector(selectTask);
@@ -15,13 +15,18 @@ const Tasks = () => {
               return (
                 <div key={i}>
                   {item.name}
-                  <div className="inline-block">
+                  <div className="inline-block ml-10">
                     <input
                       name="task"
                       value="incomplete"
                       type="checkbox"
                       onClick={() => dispatch(pending(item.name))}
                     ></input>
+                  </div>
+                  <div className="inline-block ml-2 px-1 py-0.5 bg-red-700">
+                    <button onClick={() => dispatch(del(toDo.length - 1 - i))}>
+                      Delete
+                    </button>
                   </div>
                 </div>
               );
