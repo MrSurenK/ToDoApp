@@ -6,15 +6,18 @@ const Tasks = () => {
   const toDo = useSelector(selectTask);
   const dispatch = useDispatch();
   return (
-    <div className="bg-blue-500 w-full space-y-4 justify-center flex flex-col sm:w-5/12">
+    <div className="w-full space-y-4 justify-center flex flex-col sm:w-5/12">
       {toDo
         .slice(0) // Creates a shallow copy of the toDo array
         .reverse()
         .map((item, i: number) => {
           if (item.completion === false) {
             return (
-              <div key={i} className="bg-purple-500 relative">
-                <div className="ml-5 mr-5 mt-2 mb-1">{item.name}</div>
+              <div
+                key={i}
+                className="bg-purple-500 saturate-150 relative ring-4 rounded-md ring-pink-500 ring-offset-slate-50 dark:ring-offset-slate-900 shadow-inner"
+              >
+                <div className="ml-5 mr-5 mt-2 mb-1 font-bold">{item.name}</div>
                 <div className="inline-flex absolute right-0 bottom-0">
                   <input
                     name="task"
@@ -33,9 +36,12 @@ const Tasks = () => {
             );
           } else {
             return (
-              <div key={i} className="bg-purple-500 relative">
+              <div
+                key={i}
+                className="bg-purple-500 saturate-150 relative rounded-md ring-4 ring-pink-500 ring-offset-slate-50 dark:ring-offset-slate-900 shadow-inner"
+              >
                 <div className="ml-5 mr-5 mt-2 mb-1">
-                  <del>{item.name}</del>
+                  <del className="font-extrabold">{item.name}</del>
                 </div>
                 <div className="inline-flex absolute right-0 bottom-0">
                   <input

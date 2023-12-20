@@ -10,8 +10,8 @@ const TaskForm = () => {
   const [userInputVal, setUserInputVal] = useState("");
 
   return (
-    <div className="flex flex-col space-y-8 items-center justify-center h-screen">
-      <div className="text-7xl mt-10">To Do App</div>
+    <div className="flex flex-col space-y-8 items-center justify-center h-screen bg-indigo-900">
+      <div className="text-7xl text-white mt-10">To Do App</div>
       <div className="flex flex-row space-y-4 items-center justify-center">
         <form onSubmit={(e) => e.preventDefault()}>
           <input
