@@ -26,7 +26,7 @@ const Tasks = () => {
                     onClick={() => dispatch(pending(item.name))}
                     className=""
                   ></input>
-                  <div className="ml-2 bg-red-700 px-2 py-0 text-white shadow-lg hover:shadow-red-950">
+                  <div className="ml-2 bg-red-700 px-2 py-0 text-white shadow-lg hover:shadow-red-950 rounded-lg">
                     <button onClick={() => dispatch(del(toDo.length - 1 - i))}>
                       x
                     </button>
@@ -38,7 +38,7 @@ const Tasks = () => {
             return (
               <div
                 key={i}
-                className="bg-purple-500 saturate-150 relative rounded-md ring-4 ring-pink-500 ring-offset-slate-50 dark:ring-offset-slate-900 shadow-inner"
+                className="bg-purple-500 saturate-150 relative rounded-md ring-4 ring-pink-500 ring-offset-slate-50 dark:ring-offset-slate-900 shadow-inner ml-2 mr-2"
               >
                 <div className="ml-5 mr-5 mt-2 mb-1">
                   <del className="font-extrabold">{item.name}</del>
