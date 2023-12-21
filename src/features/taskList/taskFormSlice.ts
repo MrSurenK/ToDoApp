@@ -34,7 +34,7 @@ export const taskFormSlice = createSlice({
   },
 });
 
-export const { add, pending, del, counter } = taskFormSlice.actions;
+export const { add, pending, del } = taskFormSlice.actions;
 
 export const selectTask = (state: RootState) => state.toDos.task;
 export const selectCounter = (state: RootState) => state.toDos.count;
