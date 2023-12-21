@@ -6,7 +6,7 @@ const Tasks = () => {
   const toDo = useSelector(selectTask);
   const dispatch = useDispatch();
   return (
-    <div className="w-full space-y-4 justify-center flex flex-col sm:w-5/12">
+    <div className="w-full space-y-4 justify-center flex flex-col sm:w-5/12 mx-auto">
       {toDo
         .slice(0) // Creates a shallow copy of the toDo array
         .reverse()

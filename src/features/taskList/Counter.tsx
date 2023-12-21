@@ -5,7 +5,7 @@ const Counter = () => {
   const count = useSelector(selectCounter);
 
   return (
-    <div className="flex justify-center rounded-2xl bg-cyan-500 w-fit m-auto p-4 text-white font-bold">
+    <div className="rounded-2xl self-center bg-cyan-500 w-fit p-4 text-white font-bold">
       Completed Tasks: {count}
     </div>
   );
