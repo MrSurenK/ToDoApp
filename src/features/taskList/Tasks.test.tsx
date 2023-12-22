@@ -1,5 +1,5 @@
-import { expect, test } from "vitest";
-import { render, fireEvent, screen } from "@testing-library/react";
+import { describe, expect, test, vi } from "vitest";
+import { fireEvent, screen, waitFor } from "@testing-library/react";
 
 import reducer, {
   add,
@@ -12,7 +12,7 @@ import { renderWithProviders } from "../../test/setup";
 import Tasks from "./Tasks";
 import TaskForm from "./TaskForm";
 
-// Run unit test on the reducers
+// Unit testing individual functions
 
 // Testing adding a task to an empty state
 test("should handle a todo being added to an empty list", () => {
@@ -204,4 +204,21 @@ test("completed task should remain completed when new task added and new task sh
   });
 });
 
-// Test UI
+// Unit Test on React components
+// Unit test to test that input box takes in a input
+describe.sequential("to do list components render correctly", () => {
+  test("input box takes in user input", async () => {
+    renderWithProviders(<TaskForm></TaskForm>);
+    const input = screen.getByPlaceholderText("Enter Task");
+    fireEvent.change(input, { target: { value: "test todo" } });
+    await waitFor(() => {
+      expect(input).toHaveValue("test todo");
+    });
+  });
+  test("Test button click to ensure that it works", () => {
+    const handleClick = vi.fn();
+    renderWithProviders(<TaskForm onClick={handleClick}></TaskForm>);
+    fireEvent.click(screen.getByText("Add"));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+});
